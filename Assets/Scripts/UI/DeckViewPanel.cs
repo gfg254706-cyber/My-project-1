@@ -41,16 +41,12 @@ namespace DungeonCards
 
         void Awake()
         {
+            // The original scene did not contain the new search/deck controls, so create any missing
+            // controls at runtime while still honoring Inspector-assigned references when they exist.
+            EnsureControls();
+
             if (closeButton == null && panel != null)
                 closeButton = panel.transform.Find("CloseButton")?.GetComponent<Button>();
-            if (searchInput == null && panel != null)
-                searchInput = panel.transform.Find("SearchInput")?.GetComponent<InputField>();
-            if (deckButton1 == null && panel != null)
-                deckButton1 = panel.transform.Find("DeckButton1")?.GetComponent<Button>();
-            if (deckButton2 == null && panel != null)
-                deckButton2 = panel.transform.Find("DeckButton2")?.GetComponent<Button>();
-            if (deckButton3 == null && panel != null)
-                deckButton3 = panel.transform.Find("DeckButton3")?.GetComponent<Button>();
 
             if (closeButton != null)
             {
@@ -83,6 +79,118 @@ namespace DungeonCards
             }
         }
 
+        void EnsureControls()
+        {
+            if (panel == null) return;
+
+            Transform root = panel.transform;
+
+            if (searchInput == null)
+                searchInput = root.Find("SearchInput")?.GetComponent<InputField>();
+            if (deckButton1 == null)
+                deckButton1 = root.Find("DeckButton1")?.GetComponent<Button>();
+            if (deckButton2 == null)
+                deckButton2 = root.Find("DeckButton2")?.GetComponent<Button>();
+            if (deckButton3 == null)
+                deckButton3 = root.Find("DeckButton3")?.GetComponent<Button>();
+
+            if (searchInput == null) searchInput = CreateSearchInput(root);
+            if (deckButton1 == null) deckButton1 = CreateDeckButton(root, "DeckButton1", "1", 590f);
+            if (deckButton2 == null) deckButton2 = CreateDeckButton(root, "DeckButton2", "2", 680f);
+            if (deckButton3 == null) deckButton3 = CreateDeckButton(root, "DeckButton3", "3", 770f);
+        }
+
+        static InputField CreateSearchInput(Transform parent)
+        {
+            GameObject go = new GameObject("SearchInput", typeof(RectTransform), typeof(Image), typeof(InputField));
+            go.transform.SetParent(parent, false);
+
+            RectTransform rect = go.GetComponent<RectTransform>();
+            rect.anchorMin = new Vector2(0f, 1f);
+            rect.anchorMax = new Vector2(0f, 1f);
+            rect.pivot = new Vector2(0f, 1f);
+            rect.anchoredPosition = new Vector2(40f, -145f);
+            rect.sizeDelta = new Vector2(520f, 56f);
+
+            Image background = go.GetComponent<Image>();
+            background.color = new Color(0.08f, 0.10f, 0.16f, 1f);
+
+            InputField input = go.GetComponent<InputField>();
+            input.targetGraphic = background;
+            input.lineType = InputField.LineType.SingleLine;
+
+            Text text = CreateChildText(go.transform, "Text");
+            text.alignment = TextAnchor.MiddleLeft;
+            text.fontSize = 24;
+            text.color = Color.white;
+            text.raycastTarget = false;
+            RectTransform textRect = text.rectTransform;
+            textRect.anchorMin = Vector2.zero;
+            textRect.anchorMax = Vector2.one;
+            textRect.offsetMin = new Vector2(16f, 4f);
+            textRect.offsetMax = new Vector2(-16f, -4f);
+            input.textComponent = text;
+
+            Text placeholder = CreateChildText(go.transform, "Placeholder");
+            placeholder.text = "Search cards...";
+            placeholder.fontSize = 24;
+            placeholder.color = new Color(0.65f, 0.70f, 0.80f, 1f);
+            placeholder.alignment = TextAnchor.MiddleLeft;
+            placeholder.raycastTarget = false;
+            RectTransform placeholderRect = placeholder.rectTransform;
+            placeholderRect.anchorMin = Vector2.zero;
+            placeholderRect.anchorMax = Vector2.one;
+            placeholderRect.offsetMin = new Vector2(16f, 4f);
+            placeholderRect.offsetMax = new Vector2(-16f, -4f);
+            input.placeholder = placeholder;
+
+            return input;
+        }
+
+        static Button CreateDeckButton(Transform parent, string objectName, string label, float x)
+        {
+            GameObject go = new GameObject(objectName, typeof(RectTransform), typeof(Image), typeof(Button));
+            go.transform.SetParent(parent, false);
+
+            RectTransform rect = go.GetComponent<RectTransform>();
+            rect.anchorMin = new Vector2(0f, 1f);
+            rect.anchorMax = new Vector2(0f, 1f);
+            rect.pivot = new Vector2(0f, 1f);
+            rect.anchoredPosition = new Vector2(x, -145f);
+            rect.sizeDelta = new Vector2(80f, 56f);
+
+            Image background = go.GetComponent<Image>();
+            background.color = new Color(0.22f, 0.30f, 0.48f, 1f);
+
+            Button button = go.GetComponent<Button>();
+            button.targetGraphic = background;
+
+            Text text = CreateChildText(go.transform, "Text");
+            text.text = label;
+            text.fontSize = 26;
+            text.fontStyle = FontStyle.Bold;
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = Color.white;
+            text.raycastTarget = false;
+            RectTransform textRect = text.rectTransform;
+            textRect.anchorMin = Vector2.zero;
+            textRect.anchorMax = Vector2.one;
+            textRect.offsetMin = Vector2.zero;
+            textRect.offsetMax = Vector2.zero;
+
+            return button;
+        }
+
+        static Text CreateChildText(Transform parent, string objectName)
+        {
+            GameObject go = new GameObject(objectName, typeof(RectTransform), typeof(CanvasRenderer), typeof(Text));
+            go.transform.SetParent(parent, false);
+
+            Text text = go.GetComponent<Text>();
+            text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            return text;
+        }
+
         void SetViewingDeck(int index)
         {
             int maxDecks = (Session != null && Session.Decks != null) ? Session.Decks.Length : 3;
@@ -96,9 +204,22 @@ namespace DungeonCards
             Color activeColor = new Color(0.35f, 0.65f, 0.95f, 1f);
             Color inactiveColor = new Color(0.22f, 0.30f, 0.48f, 1f);
 
+            int maxDecks = (Session != null && Session.Decks != null && Session.Decks.Length > 0)
+                ? Session.Decks.Length
+                : 3;
+
+            SetButtonVisible(deckButton1, maxDecks > 0);
+            SetButtonVisible(deckButton2, maxDecks > 1);
+            SetButtonVisible(deckButton3, maxDecks > 2);
+
             SetButtonColor(deckButton1, viewingDeckIndex == 0 ? activeColor : inactiveColor);
             SetButtonColor(deckButton2, viewingDeckIndex == 1 ? activeColor : inactiveColor);
             SetButtonColor(deckButton3, viewingDeckIndex == 2 ? activeColor : inactiveColor);
+        }
+
+        static void SetButtonVisible(Button btn, bool visible)
+        {
+            if (btn != null) btn.gameObject.SetActive(visible);
         }
 
         static void SetButtonColor(Button btn, Color c)
@@ -119,7 +240,8 @@ namespace DungeonCards
             if (panel == null) return;
 
             panel.SetActive(true);
-            viewingDeckIndex = Session != null ? Mathf.Clamp(Session.ActiveDeckIndex, 0, 2) : 0;
+            int maxDecks = (Session != null && Session.Decks != null && Session.Decks.Length > 0) ? Session.Decks.Length : 3;
+            viewingDeckIndex = Session != null ? Mathf.Clamp(Session.ActiveDeckIndex, 0, maxDecks - 1) : 0;
             if (searchInput != null) searchInput.text = "";
             UpdateDeckButtons();
             Rebuild();
