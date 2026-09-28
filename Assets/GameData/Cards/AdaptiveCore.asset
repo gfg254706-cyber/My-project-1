@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdd42ffffaebd6438c067aafdde86a3, type: 3}
+  m_Name: AdaptiveCore
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.CardData
+  cardName: Adaptive Core
+  description: The first time in a fight you play a card from a given archetype, gains 1 Charge. At 4 Charges it pays out 1 energy for every Charge it holds, and starts over.
+  archetype: 3
+  cardType: 2
+  effect: 19
+  persistent: 1
+  art: {fileID: 0}
+  costType: 1
+  cost: 1
+  baseValue: 0
+  scaling: 0
+  valuePerStatPoint: 0
+  appliesStatus: 0
+  statusMagnitude: 0
+  statusDuration: 0
+  statusTargetsSelf: 0
+  rarity: 3
+  hits: 1
+  hitsScaleWithStat: 0
+  valueSource: 0
+  allowsNegativeValue: 0
+  invertWhenWillpowerNegative: 0
+  drawsCards: 0
+  energyGain: 0
+  bonusIfFirstCard: 0
+  discardsHand: 0
+  energyPerCardDiscarded: 0
+  generatedPerCardDiscarded: 0
+  generatedCards: 0
+  returnsToHand: 0
+  freeAction: 0
+  bonusGoldOnKill: 0
+  goldPerStatPoint: 0
+  doubleIfCardsPlayed: 0
+  discardRandomEachTurn: 0
+  selfDamagePerTurn: 0
+  permanentStatChange: 0
+  permanentStatChangePerStatPoint: 0
+  permanentStatTarget: 0
+  trigger: 0
+  triggerCardsPlayedLastTurn: 0
+  constructDuration: 5
+  construct: 10
+  sacrificable: 0

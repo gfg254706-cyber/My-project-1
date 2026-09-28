@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671286ee68cbd724dbea4e58bbb599cf, type: 3}
+  m_Name: GobletofInsight
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.RelicDefinition
+  itemName: Goblet of Insight
+  description: Patience, poured. It pays out a thought at a time and takes its fee up front.
+  slot: 0
+  rarity: 1
+  consumable: 0
+  relic: 1
+  healAmount: 0
+  strength: 0
+  agility: 0
+  intellect: 5
+  vitality: 0
+  willpower: 0
+  maxHealthBonus: 0
+  energyBonus: 0
+  grantsCardEveryEncounters: 0
+  tier: 2
+  useCustomBudget: 0
+  positiveMin: 1
+  positiveMax: 3
+  useCustomNegativeBudget: 0
+  negativeChance: -1
+  negativeMin: 0
+  negativeMax: 0
+  positiveAffinity:
+  - 0.8
+  - 0.8
+  - 4
+  - 2
+  - 0.8
+  negativeAffinity:
+  - 2
+  - 2
+  - 0.1
+  - 2
+  - 3
+  useCustomConcentration: 0
+  positiveConcentrationWeights:
+  - 1
+  - 1
+  - 1
+  - 1
+  negativeConcentrationWeights:
+  - 1
+  - 1
+  - 1
+  - 1
+  effect: 30
+  scaling:
+    stat: 2
+    baseValue: 1
+    perStatPoint: 0
+    divisor: 1
+    isPercent: 0
+    percentMax: 100
+  threshold: 4
+  secondaryMagnitude: 0

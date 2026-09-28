@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3adf6d07669222468877ad343b5c1f7, type: 3}
+  m_Name: CollapsedArmory
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.EventData
+  eventName: Collapsed Armory
+  body: Rusted racks have folded into each other. Something still glints beneath the rubble.
+  options:
+  - label: Dig through the rubble
+    resultText: You tear your hands open pulling the blade free.
+    effect:
+      healthChange: -5
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 11400000, guid: e91a5f29926467545be7b27bf726f631, type: 2}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []
+  - label: Search slowly and carefully
+    resultText: Patience pays, but the hour is late and your mind wanders.
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: -20
+      goldChange: 0
+      grantItem: {fileID: 11400000, guid: d39621730a9118a42a6f0fcf627ccb45, type: 2}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []
+  - label: Move on
+    resultText: You leave the dead their armour.
+    effect:
+      healthChange: 3
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []

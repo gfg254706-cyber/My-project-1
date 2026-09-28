@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3adf6d07669222468877ad343b5c1f7, type: 3}
+  m_Name: WarmEgg
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.EventData
+  eventName: Warm Egg
+  body: Nestled in a bowl of old straw is an egg the size of your fist. It is warm, and it is moving. A single pale feather lies beside it. Whatever laid this is not far.
+  options:
+  - label: Take the feather and leave the egg
+    resultText: You lift the feather and back away, slowly, with the whole nest undisturbed.
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 11400000, guid: 7fc8d96c4a3dd9745a73e9eac3112689, type: 2}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []
+  - label: Reach for the egg
+    resultText: 
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes:
+    - weight: 20
+      resultText: The shell gives. Something small and bright settles into your palm, and stays there, and starts to feed.
+      effect:
+        healthChange: 0
+        permanentMaxHealth: 0
+        attribute: 0
+        attributeChange: 0
+        experienceChange: 0
+        goldChange: 0
+        grantItem: {fileID: 11400000, guid: 458149d97a8cec343b3f59e47433d6d8, type: 2}
+        grantCard: {fileID: 0}
+        grantCardCount: 0
+        removeCard: {fileID: 0}
+        removeCardCount: 0
+        randomItemPool: []
+        randomItemAmount: 1
+        grantRandomCard: 0
+        grantRandomCardCount: 1
+        startCombat: {fileID: 0}
+    - weight: 80
+      resultText: The straw erupts. What was mothering this nest is enormous, and you have its egg in your hands.
+      effect:
+        healthChange: 0
+        permanentMaxHealth: 0
+        attribute: 0
+        attributeChange: 0
+        experienceChange: 0
+        goldChange: 0
+        grantItem: {fileID: 0}
+        grantCard: {fileID: 0}
+        grantCardCount: 0
+        removeCard: {fileID: 0}
+        removeCardCount: 0
+        randomItemPool: []
+        randomItemAmount: 1
+        grantRandomCard: 0
+        grantRandomCardCount: 1
+        startCombat: {fileID: 11400000, guid: 06251d0767612af42a4a05e0d93ea8c0, type: 2}
+  - label: Back away from the nest
+    resultText: You leave the egg where it lies and move on.
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []

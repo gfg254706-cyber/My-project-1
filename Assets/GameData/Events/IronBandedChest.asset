@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3adf6d07669222468877ad343b5c1f7, type: 3}
+  m_Name: IronBandedChest
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.EventData
+  eventName: Iron Banded Chest
+  body: A chest sits against the wall, its lock long since rusted through. Something inside it shifts as you lean closer.
+  options:
+  - label: Open it
+    resultText: 
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes:
+    - weight: 25
+      resultText: The lid comes up on a folded bundle of gear, still serviceable.
+      effect:
+        healthChange: 0
+        permanentMaxHealth: 0
+        attribute: 0
+        attributeChange: 0
+        experienceChange: 0
+        goldChange: 0
+        grantItem: {fileID: 0}
+        grantCard: {fileID: 0}
+        grantCardCount: 0
+        removeCard: {fileID: 0}
+        removeCardCount: 0
+        randomItemPool:
+        - {fileID: 11400000, guid: e61044e884d8b3b4c8fe0c6294b9fffa, type: 2}
+        - {fileID: 11400000, guid: d39621730a9118a42a6f0fcf627ccb45, type: 2}
+        - {fileID: 11400000, guid: 840f97e5092644044ba37f42671db1b7, type: 2}
+        - {fileID: 11400000, guid: b57f93987e4bd7b46b0f6a6c14530c53, type: 2}
+        randomItemAmount: 1
+        grantRandomCard: 0
+        grantRandomCardCount: 1
+        startCombat: {fileID: 0}
+    - weight: 25
+      resultText: Two clay bottles, wax still sealing them. You take both.
+      effect:
+        healthChange: 0
+        permanentMaxHealth: 0
+        attribute: 0
+        attributeChange: 0
+        experienceChange: 0
+        goldChange: 0
+        grantItem: {fileID: 0}
+        grantCard: {fileID: 0}
+        grantCardCount: 0
+        removeCard: {fileID: 0}
+        removeCardCount: 0
+        randomItemPool:
+        - {fileID: 11400000, guid: f3dd6d8643799f74cb8bcb759bdc654c, type: 2}
+        randomItemAmount: 2
+        grantRandomCard: 0
+        grantRandomCardCount: 1
+        startCombat: {fileID: 0}
+    - weight: 50
+      resultText: The chest unfolds. Teeth, and a great deal of them. You wrench yourself free, bleeding, with nothing to show for it.
+      effect:
+        healthChange: -10
+        permanentMaxHealth: 0
+        attribute: 0
+        attributeChange: 0
+        experienceChange: 0
+        goldChange: 0
+        grantItem: {fileID: 0}
+        grantCard: {fileID: 0}
+        grantCardCount: 0
+        removeCard: {fileID: 0}
+        removeCardCount: 0
+        randomItemPool: []
+        randomItemAmount: 1
+        grantRandomCard: 0
+        grantRandomCardCount: 1
+        startCombat: {fileID: 0}
+  - label: Leave it alone
+    resultText: You walk past it. Better poor than bitten.
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []

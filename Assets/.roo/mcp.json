@@ -1,0 +1,42 @@
+{
+	"mcpServers": {
+		"unity": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"anklebreaker-unity-mcp@latest"
+			],
+			"env": {
+				"UNITY_HUB_PATH": "C:\\Program Files\\Unity Hub\\Unity Hub.exe",
+				"UNITY_BRIDGE_PORT": "8080"
+			},
+			"disabled": false,
+			"alwaysAllow": [
+				"unity_list_instances"
+			],
+			"disabledTools": [
+				"unity_agent_log",
+				"unity_packages_info",
+				"unity_packages_search",
+				"unity_packages_remove",
+				"unity_packages_add",
+				"unity_packages_list",
+				"unity_graphics_game_capture",
+				"unity_screenshot_editor_window",
+				"unity_screenshot_game",
+				"unity_undo",
+				"unity_undo_last",
+				"unity_redo",
+				"unity_undo_history",
+				"unity_selection_focus_scene_view",
+				"unity_hub_install_modules",
+				"unity_hub_install_editor",
+				"unity_hub_available_releases",
+				"unity_hub_list_editors",
+				"unity_hub_get_install_path",
+				"unity_hub_set_install_path",
+				"unity_editor_ping"
+			]
+		}
+	}
+}

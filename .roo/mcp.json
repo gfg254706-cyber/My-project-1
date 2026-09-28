@@ -1,0 +1,48 @@
+{
+	"mcpServers": {
+		"unity": {
+			"command": "node",
+			"args": [
+				"Z:\\Blasphemous\\unity-mcp-server\\src\\index.js"
+			],
+			"env": {
+				"UNITY_HUB_PATH": "Z:\\Blasphemous 2\\Unity Hub\\Unity Hub.exe",
+				"UNITY_BRIDGE_PORT": "8080"
+			},
+			"disabled": false,
+			"alwaysAllow": [],
+			"disabledTools": [
+				"unity_select_instance",
+				"unity_hub_list_editors",
+				"unity_hub_available_releases",
+				"unity_hub_install_editor",
+				"unity_hub_install_modules",
+				"unity_hub_get_install_path",
+				"unity_hub_set_install_path",
+				"unity_editor_ping",
+				"unity_component_set_reference",
+				"unity_asset_list",
+				"unity_asset_import",
+				"unity_asset_delete",
+				"unity_play_mode",
+				"unity_execute_menu_item",
+				"unity_selection_focus_scene_view",
+				"unity_search_assets",
+				"unity_scene_stats",
+				"unity_screenshot_game",
+				"unity_screenshot_scene",
+				"unity_graphics_game_capture",
+				"unity_graphics_scene_capture",
+				"unity_packages_remove",
+				"unity_packages_add",
+				"unity_packages_list",
+				"unity_queue_info",
+				"unity_packages_info",
+				"unity_packages_search",
+				"unity_list_advanced_tools",
+				"unity_agent_log",
+				"unity_agents_list"
+			]
+		}
+	}
+}

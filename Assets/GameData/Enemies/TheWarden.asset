@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b921cfe0ab6758946940fbfe32bccb14, type: 3}
+  m_Name: TheWarden
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.EnemyData
+  enemyName: The Warden
+  description: It has been down here longer than the dungeon has, and it has opinions about visitors.
+  maxHealth: 50
+  attackPattern: 06000000080000000b000000i
+  startingBlock: 10
+  blockPattern: 000000000600000000000000i
+  experienceReward: 150
+  goldReward: 60

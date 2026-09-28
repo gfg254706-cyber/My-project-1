@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3adf6d07669222468877ad343b5c1f7, type: 3}
+  m_Name: SealedDoor
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.EventData
+  eventName: Sealed Door
+  body: A door of banded iron blocks the corridor. Four ways past it present themselves.
+  options:
+  - label: Force it with your shoulder
+    resultText: The hinges give, and so does something in your ribs.
+    effect:
+      healthChange: -6
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 1
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []
+  - label: Work the lock with a pick
+    resultText: The tumblers click. You will remember the trick.
+    effect:
+      healthChange: -4
+      permanentMaxHealth: 0
+      attribute: 1
+      attributeChange: 1
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []
+  - label: Study the runes carved into it
+    resultText: The runes resolve into a pattern, and the door recognises it.
+    effect:
+      healthChange: -3
+      permanentMaxHealth: 0
+      attribute: 2
+      attributeChange: 1
+      experienceChange: 0
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []
+  - label: Leave it and backtrack
+    resultText: You lose time, but you learn the shape of this place.
+    effect:
+      healthChange: 0
+      permanentMaxHealth: 0
+      attribute: 0
+      attributeChange: 0
+      experienceChange: 15
+      goldChange: 0
+      grantItem: {fileID: 0}
+      grantCard: {fileID: 0}
+      grantCardCount: 0
+      removeCard: {fileID: 0}
+      removeCardCount: 0
+      randomItemPool: []
+      randomItemAmount: 1
+      grantRandomCard: 0
+      grantRandomCardCount: 1
+      startCombat: {fileID: 0}
+    outcomes: []

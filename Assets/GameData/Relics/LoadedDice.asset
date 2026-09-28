@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671286ee68cbd724dbea4e58bbb599cf, type: 3}
+  m_Name: LoadedDice
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonCards.RelicDefinition
+  itemName: Loaded Dice
+  description: They come up your way. The more you lean on your reflexes, the more often they do.
+  slot: 0
+  rarity: 1
+  consumable: 0
+  relic: 1
+  healAmount: 0
+  strength: 0
+  agility: 1
+  intellect: 0
+  vitality: 0
+  willpower: 0
+  maxHealthBonus: 0
+  energyBonus: 0
+  grantsCardEveryEncounters: 0
+  tier: 3
+  useCustomBudget: 0
+  positiveMin: 1
+  positiveMax: 3
+  useCustomNegativeBudget: 0
+  negativeChance: -1
+  negativeMin: 0
+  negativeMax: 0
+  positiveAffinity:
+  - 0.7
+  - 5
+  - 0.7
+  - 0.6
+  - 0.6
+  negativeAffinity:
+  - 3
+  - 0.3
+  - 2.5
+  - 2
+  - 2
+  useCustomConcentration: 0
+  positiveConcentrationWeights:
+  - 1
+  - 1
+  - 1
+  - 1
+  negativeConcentrationWeights:
+  - 1
+  - 1
+  - 1
+  - 1
+  effect: 1
+  scaling:
+    stat: 1
+    baseValue: 20
+    perStatPoint: 1
+    divisor: 1
+    isPercent: 1
+    percentMax: 100
+  threshold: 0
+  secondaryMagnitude: 0
